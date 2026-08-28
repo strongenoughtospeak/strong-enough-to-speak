@@ -1,2040 +1,667 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-
-<meta charset="UTF-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<meta name="description" content="Strong Enough to Speak - A men's mental health and wellness initiative founded by Clayton T. Banda.">
-
-<title>Strong Enough to Speak | Men's Mental Health & Wellness</title>
-
-<style>
-
-/* =========================
-   GENERAL
-========================= */
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    scroll-behavior:smooth;
-}
-
-body{
-    font-family:Arial, Helvetica, sans-serif;
-    line-height:1.7;
-    color:#243b53;
-    background:#f4f7fa;
-}
-
-section{
-    padding:80px 7%;
-}
-
-h1,h2,h3{
-    line-height:1.2;
-}
-
-a{
-    text-decoration:none;
-}
-
-
-/* =========================
-   NAVIGATION
-========================= */
-
-nav{
-    position:sticky;
-    top:0;
-    z-index:1000;
-
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-
-    padding:18px 7%;
-
-    background:#102a43;
-    color:white;
-}
-
-.logo{
-    font-size:21px;
-    font-weight:bold;
-}
-
-nav ul{
-    display:flex;
-    list-style:none;
-    gap:20px;
-}
-
-nav ul li a{
-    color:white;
-    font-weight:bold;
-    font-size:14px;
-}
-
-nav ul li a:hover{
-    color:#7dd3fc;
-}
-
-
-/* =========================
-   HERO
-========================= */
-
-.hero{
-
-    min-height:88vh;
-
-    display:flex;
-    align-items:center;
-
-    padding:80px 7%;
-
-    color:white;
-
-    background:
-    linear-gradient(
-        135deg,
-        #102a43,
-        #145da0,
-        #2f80ed
-    );
-}
-
-.hero-content{
-    max-width:850px;
-}
-
-.hero-label{
-
-    display:inline-block;
-
-    color:#7dd3fc;
-
-    font-weight:bold;
-
-    letter-spacing:2px;
-
-    text-transform:uppercase;
-
-    margin-bottom:15px;
-}
-
-.hero h1{
-
-    font-size:clamp(45px,7vw,78px);
-
-    line-height:1.05;
-
-    margin-bottom:20px;
-}
-
-.hero h2{
-
-    font-size:28px;
-
-    font-weight:normal;
-
-    margin-bottom:20px;
-}
-
-.hero p{
-
-    font-size:19px;
-
-    max-width:730px;
-
-    margin-bottom:30px;
-}
-
-
-/* =========================
-   BUTTONS
-========================= */
-
-.btn{
-
-    display:inline-block;
-
-    background:#2f80ed;
-
-    color:white;
-
-    padding:13px 23px;
-
-    border-radius:7px;
-
-    font-weight:bold;
-
-    border:none;
-
-    cursor:pointer;
-}
-
-.btn:hover{
-    opacity:.9;
-}
-
-.btn-outline{
-
-    background:transparent;
-
-    border:2px solid white;
-
-    margin-left:10px;
-}
-
-
-/* =========================
-   SECTION TITLES
-========================= */
-
-.section-title{
-
-    text-align:center;
-
-    color:#102a43;
-
-    font-size:38px;
-
-    margin-bottom:15px;
-}
-
-.section-intro{
-
-    max-width:780px;
-
-    margin:0 auto 45px;
-
-    text-align:center;
-
-    color:#627d98;
-}
-
-
-/* =========================
-   CARDS
-========================= */
-
-.cards{
-
-    max-width:1150px;
-
-    margin:auto;
-
-    display:grid;
-
-    grid-template-columns:
-    repeat(4,1fr);
-
-    gap:22px;
-}
-
-.card{
-
-    background:white;
-
-    padding:28px;
-
-    border-radius:12px;
-
-    border:1px solid #d9e2ec;
-
-    box-shadow:
-    0 5px 18px
-    rgba(16,42,67,.06);
-}
-
-.card-icon{
-
-    font-size:40px;
-
-    margin-bottom:12px;
-}
-
-.card h3{
-
-    color:#102a43;
-
-    margin-bottom:10px;
-}
-
-
-/* =========================
-   ABOUT
-========================= */
-
-.about{
-    background:white;
-}
-
-.about-container{
-
-    max-width:1050px;
-
-    margin:auto;
-
-    display:grid;
-
-    grid-template-columns:
-    1fr 1fr;
-
-    gap:40px;
-}
-
-.about-box{
-
-    background:#f4f7fa;
-
-    padding:30px;
-
-    border-radius:12px;
-}
-
-.about-box h3{
-
-    color:#102a43;
-
-    margin-bottom:12px;
-}
-
-.values{
-
-    margin-top:20px;
-
-    display:flex;
-
-    flex-wrap:wrap;
-
-    gap:10px;
-}
-
-.value{
-
-    background:#eaf2ff;
-
-    color:#1455a3;
-
-    padding:7px 13px;
-
-    border-radius:20px;
-
-    font-weight:bold;
-}
-
-
-/* =========================
-   FOUNDER
-========================= */
-
-.founder{
-
-    max-width:900px;
-
-    margin:auto;
-
-    text-align:center;
-}
-
-.badge{
-
-    display:inline-block;
-
-    background:#eaf2ff;
-
-    color:#1455a3;
-
-    padding:8px 15px;
-
-    border-radius:30px;
-
-    font-weight:bold;
-
-    margin-bottom:15px;
-}
-
-.founder h2{
-
-    color:#102a43;
-
-    font-size:38px;
-
-    margin-bottom:10px;
-}
-
-
-/* =========================
-   PROGRAMMES
-========================= */
-
-.programmes{
-
-    max-width:1150px;
-
-    margin:auto;
-
-    display:grid;
-
-    grid-template-columns:
-    repeat(2,1fr);
-
-    gap:25px;
-}
-
-.programme{
-
-    background:white;
-
-    padding:30px;
-
-    border-radius:12px;
-
-    border-left:5px solid #2f80ed;
-
-    box-shadow:
-    0 5px 18px
-    rgba(16,42,67,.06);
-}
-
-.programme h3{
-
-    color:#102a43;
-
-    margin-bottom:10px;
-
-    font-size:22px;
-}
-
-.programme-icon{
-
-    font-size:35px;
-
-    margin-bottom:8px;
-}
-
-
-/* =========================
-   SUPPORT
-========================= */
-
-.support{
-
-    background:white;
-}
-
-.support-grid{
-
-    max-width:1100px;
-
-    margin:auto;
-
-    display:grid;
-
-    grid-template-columns:
-    repeat(2,1fr);
-
-    gap:22px;
-}
-
-.support-card{
-
-    background:#f4f7fa;
-
-    padding:30px;
-
-    border-radius:12px;
-
-    border:1px solid #d9e2ec;
-}
-
-.support-card h3{
-
-    color:#102a43;
-
-    margin-bottom:10px;
-}
-
-.warning{
-
-    max-width:1100px;
-
-    margin:30px auto 0;
-
-    padding:20px;
-
-    background:#fff7db;
-
-    border-left:5px solid #f0ad4e;
-
-    border-radius:6px;
-}
-
-
-/* =========================
-   RESOURCES
-========================= */
-
-.resource{
-
-    max-width:900px;
-
-    margin:15px auto;
-
-    background:white;
-
-    padding:27px;
-
-    border-radius:10px;
-
-    border:1px solid #d9e2ec;
-}
-
-.resource h3{
-
-    color:#102a43;
-
-    margin-bottom:8px;
-}
-
-
-/* =========================
-   FORMS
-========================= */
-
-.form{
-
-    max-width:760px;
-
-    margin:auto;
-
-    background:white;
-
-    padding:32px;
-
-    border-radius:12px;
-
-    border:1px solid #d9e2ec;
-
-    box-shadow:
-    0 5px 18px
-    rgba(16,42,67,.05);
-}
-
-.form h3{
-
-    color:#102a43;
-
-    margin-bottom:15px;
-}
-
-.form label{
-
-    display:block;
-
-    font-weight:bold;
-
-    margin:15px 0 6px;
-}
-
-.form input,
-.form select,
-.form textarea{
-
-    width:100%;
-
-    padding:12px;
-
-    border:1px solid #bcccdc;
-
-    border-radius:6px;
-
-    font-size:15px;
-
-    font-family:inherit;
-}
-
-.form textarea{
-
-    min-height:130px;
-
-    resize:vertical;
-}
-
-.form button{
-
-    width:100%;
-
-    margin-top:20px;
-}
-
-.form-note{
-
-    font-size:13px;
-
-    color:#627d98;
-
-    margin-top:15px;
-}
-
-
-/* =========================
-   PARTNERS
-========================= */
-
-.partner-grid{
-
-    max-width:1100px;
-
-    margin:auto;
-
-    display:grid;
-
-    grid-template-columns:
-    repeat(3,1fr);
-
-    gap:22px;
-}
-
-.partner-card{
-
-    background:white;
-
-    padding:30px;
-
-    border-radius:12px;
-
-    border:1px solid #d9e2ec;
-
-    text-align:center;
-}
-
-.partner-card .icon{
-
-    font-size:40px;
-
-    margin-bottom:10px;
-}
-
-.partner-card h3{
-
-    color:#102a43;
-
-    margin-bottom:10px;
-}
-
-
-/* =========================
-   CONTACT
-========================= */
-
-.contact-box{
-
-    max-width:800px;
-
-    margin:auto;
-
-    text-align:center;
-
-    background:white;
-
-    padding:35px;
-
-    border-radius:12px;
-
-    border:1px solid #d9e2ec;
-}
-
-
-/* =========================
-   FOOTER
-========================= */
-
-footer{
-
-    background:#102a43;
-
-    color:white;
-
-    text-align:center;
-
-    padding:45px 7%;
-}
-
-footer p{
-
-    margin:6px;
-}
-
-.footer-small{
-
-    color:#d9e2ec;
-
-    font-size:13px;
-}
-
-
-/* =========================
-   MOBILE
-========================= */
-
-@media(max-width:900px){
-
-    nav{
-
-        flex-direction:column;
-
-        gap:15px;
-    }
-
-    nav ul{
-
-        flex-wrap:wrap;
-
-        justify-content:center;
-
-        gap:12px;
-    }
-
-    .cards{
-
-        grid-template-columns:
-        1fr 1fr;
-    }
-
-    .about-container{
-
-        grid-template-columns:1fr;
-    }
-
-    .partner-grid{
-
-        grid-template-columns:1fr;
-    }
-}
-
-@media(max-width:600px){
-
-    section{
-
-        padding:60px 5%;
-    }
-
-    .cards{
-
-        grid-template-columns:1fr;
-    }
-
-    .programmes{
-
-        grid-template-columns:1fr;
-    }
-
-    .support-grid{
-
-        grid-template-columns:1fr;
-    }
-
-    .hero{
-
-        min-height:80vh;
-
-        padding:60px 6%;
-    }
-
-    .hero h1{
-
-        font-size:45px;
-    }
-
-    .hero h2{
-
-        font-size:23px;
-    }
-
-    .btn-outline{
-
-        margin:10px 0 0;
-    }
-}
-
-</style>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Strong Enough to Speak | Men's Mental Health & Wellness</title>
+
+    <meta name="description" content="Strong Enough to Speak is a men's mental health and wellness initiative founded by Clayton T. Banda, a Health Psychology student and certified peer educator and peer counsellor at Midlands State University.">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            color: #222;
+            background: #f5f7fa;
+        }
+
+        header {
+            background: #102a43;
+            color: white;
+            padding: 18px 7%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .logo {
+            font-size: 1.35rem;
+            font-weight: bold;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 22px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #102a43, #1f4e79);
+            color: white;
+            padding: 100px 7%;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3.2rem;
+            margin-bottom: 15px;
+        }
+
+        .hero h2 {
+            font-size: 1.5rem;
+            font-weight: normal;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            max-width: 800px;
+            margin: 0 auto 30px;
+            font-size: 1.1rem;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 13px 24px;
+            border-radius: 7px;
+            text-decoration: none;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background: white;
+            color: #102a43;
+        }
+
+        .btn-whatsapp {
+            background: #25D366;
+            color: white;
+        }
+
+        .btn-email {
+            background: #1f4e79;
+            color: white;
+        }
+
+        section {
+            padding: 70px 7%;
+        }
+
+        .section-title {
+            text-align: center;
+            color: #102a43;
+            margin-bottom: 15px;
+            font-size: 2.2rem;
+        }
+
+        .section-intro {
+            max-width: 800px;
+            margin: 0 auto 40px;
+            text-align: center;
+            color: #555;
+        }
+
+        .about {
+            background: white;
+        }
+
+        .founder {
+            max-width: 900px;
+            margin: auto;
+            background: #f0f4f8;
+            padding: 35px;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .founder h3 {
+            color: #102a43;
+            margin-bottom: 10px;
+            font-size: 1.6rem;
+        }
+
+        .quote {
+            margin-top: 25px;
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #1f4e79;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 22px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .card {
+            background: white;
+            padding: 28px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        .card h3 {
+            color: #102a43;
+            margin-bottom: 12px;
+        }
+
+        .card ul {
+            padding-left: 20px;
+        }
+
+        .support {
+            background: #eaf2f8;
+        }
+
+        .contact-box {
+            max-width: 850px;
+            margin: auto;
+            background: white;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+
+        .contact-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 25px;
+        }
+
+        .contact-info {
+            margin-top: 25px;
+        }
+
+        .contact-info p {
+            margin: 8px 0;
+        }
+
+        .partnership {
+            background: white;
+        }
+
+        .notice {
+            max-width: 850px;
+            margin: 35px auto 0;
+            padding: 20px;
+            background: #fff8e1;
+            border-left: 5px solid #d89b00;
+            border-radius: 6px;
+        }
+
+        footer {
+            background: #102a43;
+            color: white;
+            text-align: center;
+            padding: 35px 7%;
+        }
+
+        footer a {
+            color: white;
+        }
+
+        @media (max-width: 750px) {
+
+            nav {
+                flex-direction: column;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 12px;
+            }
+
+            .hero {
+                padding: 70px 6%;
+            }
+
+            .hero h1 {
+                font-size: 2.3rem;
+            }
+
+            section {
+                padding: 55px 6%;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-<!-- =========================
-     NAVIGATION
-========================= -->
+<header>
+    <nav>
+        <div class="logo">Strong Enough to Speak</div>
 
-<nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#programmes">Programmes</a></li>
+            <li><a href="#support">Get Support</a></li>
+            <li><a href="#partners">Partners</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
 
-<div class="logo">
-Strong Enough to Speak
-</div>
 
-<ul>
+<!-- HERO -->
 
-<li>
-<a href="#home">Home</a>
-</li>
+<section class="hero">
 
-<li>
-<a href="#about">About</a>
-</li>
+    <h1>Strong Enough to Speak</h1>
 
-<li>
-<a href="#programmes">Programmes</a>
-</li>
+    <h2>Men's Mental Health & Wellness Initiative</h2>
 
-<li>
-<a href="#support">Get Support</a>
-</li>
+    <p>
+        Creating safe spaces where men can talk, connect, support one another
+        and seek appropriate help without shame.
+    </p>
 
-<li>
-<a href="#join">Join Us</a>
-</li>
+    <div class="buttons">
 
-<li>
-<a href="#partners">Partners</a>
-</li>
+        <a class="btn btn-primary" href="#about">
+            Learn More
+        </a>
 
-</ul>
+        <a class="btn btn-whatsapp"
+           href="https://wa.me/263783625912?text=Hello%20Strong%20Enough%20to%20Speak%2C%20I%20would%20like%20to%20know%20more%20about%20the%20initiative."
+           target="_blank">
+            Chat on WhatsApp
+        </a>
 
-</nav>
-
-<!-- =========================
-     HOME
-========================= -->
-
-<section class="hero" id="home">
-
-<div class="hero-content">
-
-<div class="hero-label">
-
-Men's Mental Health & Wellness Initiative
-
-</div>
-
-<h1>
-
-Strong Enough to Speak
-
-</h1>
-
-<h2>
-
-You don't have to face everything alone.
-
-</h2>
-
-<p>
-
-Strong Enough to Speak is an initiative focused on improving
-men's mental and emotional wellbeing through awareness,
-peer support, healthy connection and appropriate referral
-to professional support.
-
-</p>
-
-<a href="#support" class="btn">
-
-Get Support
-
-</a>
-
-<a href="#programmes" class="btn btn-outline">
-
-Our Programmes
-
-</a>
-
-</div>
+    </div>
 
 </section>
 
-<!-- =========================
-     OUR PURPOSE
-========================= -->
+
+<!-- ABOUT -->
+
+<section id="about" class="about">
+
+    <h2 class="section-title">About Strong Enough to Speak</h2>
+
+    <p class="section-intro">
+        Strong Enough to Speak is an emerging men's mental-health and wellness
+        initiative focused on awareness, peer connection, healthy coping,
+        early help-seeking and appropriate professional referral.
+    </p>
+
+    <div class="founder">
+
+        <h3>Founded by Clayton T. Banda</h3>
+
+        <p>
+            Clayton T. Banda is a Health Psychology student at
+            Midlands State University and a Certified Peer Educator
+            and Peer Counsellor.
+        </p>
+
+        <p class="quote">
+            "You don't have to face everything alone."
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- MISSION -->
 
 <section>
 
-<h2 class="section-title">
+    <h2 class="section-title">Our Mission</h2>
 
-Why Strong Enough to Speak?
-
-</h2>
-
-<p class="section-intro">
-
-Many men experience emotional and psychological difficulties
-but may struggle to talk about them or seek help. Our goal is
-to make conversations about men's wellbeing easier, safer
-and more accepted.
-
-</p>
-
-<div class="cards">
-
-<div class="card">
-
-<div class="card-icon">
-🗣️
-</div>
-
-<h3>
-Talk
-</h3>
-
-<p>
-
-Create safe opportunities for men to talk about emotions,
-stress, relationships and personal challenges.
-
-</p>
-
-</div>
-
-<div class="card">
-
-<div class="card-icon">
-🤝
-</div>
-
-<h3>
-Connect
-</h3>
-
-<p>
-
-Build positive relationships and communities where men
-can support one another.
-
-</p>
-
-</div>
-
-<div class="card">
-
-<div class="card-icon">
-💪
-</div>
-
-<h3>
-Grow
-</h3>
-
-<p>
-
-Promote healthier coping strategies, emotional awareness
-and personal development.
-
-</p>
-
-</div>
-
-<div class="card">
-
-<div class="card-icon">
-🧠
-</div>
-
-<h3>
-Get Help
-</h3>
-
-<p>
-
-Encourage men to seek appropriate professional support
-when they need more than peer support.
-
-</p>
-
-</div>
-
-</div>
+    <p class="section-intro">
+        To promote men's mental and emotional wellbeing by creating safe
+        spaces for conversation, connection, education, peer support and
+        access to appropriate professional services.
+    </p>
 
 </section>
 
-<!-- =========================
-     ABOUT
-========================= -->
 
-<section class="about" id="about">
-
-<h2 class="section-title">
-
-About Us
-
-</h2>
-
-<p class="section-intro">
-
-Strong Enough to Speak is a developing men's mental-health
-and wellness initiative designed to combine education,
-peer support, community activities and referral pathways.
-
-</p>
-
-<div class="about-container">
-
-<div class="about-box">
-
-<h3>
-Our Mission
-</h3>
-
-<p>
-
-To promote men's mental and emotional wellbeing by creating
-safe spaces for conversation, connection, education and
-appropriate support.
-
-</p>
-
-<div class="values">
-
-<span class="value">
-Respect
-</span>
-
-<span class="value">
-Empathy
-</span>
-
-<span class="value">
-Confidentiality
-</span>
-
-<span class="value">
-Inclusion
-</span>
-
-<span class="value">
-Hope
-</span>
-
-</div>
-
-</div>
-
-<div class="about-box">
-
-<h3>
-Our Vision
-</h3>
-
-<p>
-
-A society where men feel comfortable acknowledging their
-mental-health challenges, speaking about their experiences
-and seeking help without shame or fear of judgement.
-
-</p>
-
-<br>
-
-<h3>
-Who We Serve
-</h3>
-
-<p>
-
-Young men, adult men, students, community members and
-anyone interested in supporting men's mental and emotional
-wellbeing.
-
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- =========================
-     FOUNDER
-========================= -->
-
-<section>
-
-<div class="founder">
-
-<span class="badge">
-
-Founder & Programme Coordinator
-
-</span>
-
-<h2>
-
-Clayton T. Banda
-
-</h2>
-
-<p>
-
-<strong>
-
-Health Psychology Student |
-Certified Peer Educator & Peer Counsellor |
-Midlands State University
-
-</strong>
-
-</p>
-
-<br>
-
-<p>
-
-Clayton T. Banda is a Health Psychology student at Midlands
-State University with training in peer education and peer
-counselling.
-
-</p>
-
-<br>
-
-<p>
-
-Strong Enough to Speak was developed with the aim of
-encouraging men to speak openly about mental health,
-reducing stigma around help-seeking and connecting people
-with appropriate sources of support.
-
-</p>
-
-<br>
-
-<p>
-
-The initiative seeks to collaborate with qualified
-professionals, NGOs, universities, community organisations
-and other partners to promote men's wellbeing.
-
-</p>
-
-</div>
-
-</section>
-
-<!-- =========================
-     PROGRAMMES
-========================= -->
+<!-- PROGRAMMES -->
 
 <section id="programmes">
 
-<h2 class="section-title">
+    <h2 class="section-title">Our Programmes</h2>
 
-Our Programmes
+    <p class="section-intro">
+        Our activities are designed to make conversations about men's
+        mental health more accessible and supportive.
+    </p>
 
-</h2>
+    <div class="cards">
 
-<p class="section-intro">
+        <div class="card">
+            <h3>🧠 Mental Health Awareness</h3>
 
-Our programmes are designed to create practical opportunities
-for men to learn, connect, support one another and access
-appropriate help.
+            <p>
+                Educational sessions covering mental health, depression,
+                anxiety, stress, trauma, substance-use concerns,
+                healthy coping and help-seeking.
+            </p>
+        </div>
 
-</p>
 
-<div class="programmes">
+        <div class="card">
+            <h3>🗣️ Men's Talk Circles</h3>
 
-<div class="programme">
+            <p>
+                Structured conversations where men can discuss topics such
+                as relationships, stress, masculinity, academic pressure,
+                family responsibilities and emotional wellbeing.
+            </p>
+        </div>
 
-<div class="programme-icon">
-🧠
-</div>
 
-<h3>
-Mental Health Awareness
-</h3>
+        <div class="card">
+            <h3>🤝 Peer Support</h3>
 
-<p>
+            <p>
+                Peer-based listening, encouragement and emotional support
+                within clearly defined peer-support boundaries.
+            </p>
+        </div>
 
-Educational sessions covering mental health, depression,
-anxiety, stress, emotional wellbeing, stigma and help-seeking.
 
-</p>
+        <div class="card">
+            <h3>⚽ Sport & Wellness</h3>
 
-</div>
+            <p>
+                Sport, physical activity and recreational activities
+                designed to encourage healthy routines and positive
+                social connection.
+            </p>
+        </div>
 
-<div class="programme">
 
-<div class="programme-icon">
-🗣️
-</div>
+        <div class="card">
+            <h3>🎓 Campus Outreach</h3>
 
-<h3>
-Men's Talk Circles
-</h3>
+            <p>
+                Mental-health awareness campaigns, discussions,
+                workshops and wellness activities for students.
+            </p>
+        </div>
 
-<p>
 
-Structured peer-support discussions where men can share
-experiences, challenges and coping strategies in a respectful
-environment.
+        <div class="card">
+            <h3>🏘️ Community Outreach</h3>
 
-</p>
+            <p>
+                Community-based mental-health awareness and men's
+                wellness activities developed through partnerships.
+            </p>
+        </div>
 
-</div>
 
-<div class="programme">
+        <div class="card">
+            <h3>🏥 Professional Referral</h3>
 
-<div class="programme-icon">
-⚽
-</div>
+            <p>
+                Building relationships with qualified professionals
+                and established organisations so participants can
+                access appropriate specialised support.
+            </p>
+        </div>
 
-<h3>
-Sport & Wellness
-</h3>
-
-<p>
-
-Use sport, physical activity and recreational activities
-to encourage connection, healthy routines and wellbeing.
-
-</p>
-
-</div>
-
-<div class="programme">
-
-<div class="programme-icon">
-🤝
-</div>
-
-<h3>
-Peer Support
-</h3>
-
-<p>
-
-Provide basic peer support through trained peer educators
-and help participants identify when professional support
-may be appropriate.
-
-</p>
-
-</div>
-
-<div class="programme">
-
-<div class="programme-icon">
-🎓
-</div>
-
-<h3>
-Campus Outreach
-</h3>
-
-<p>
-
-Reach students and young men through awareness campaigns,
-discussions, workshops and wellbeing activities.
-
-</p>
-
-</div>
-
-<div class="programme">
-
-<div class="programme-icon">
-🏘️
-</div>
-
-<h3>
-Community Outreach
-</h3>
-
-<p>
-
-Take mental-health education and wellbeing activities into
-communities through partnerships and outreach programmes.
-
-</p>
-
-</div>
-
-<div class="programme">
-
-<div class="programme-icon">
-🏥
-</div>
-
-<h3>
-Professional Referral
-</h3>
-
-<p>
-
-Develop relationships with appropriately qualified
-professionals and organisations so participants can be
-directed to suitable services when necessary.
-
-</p>
-
-</div>
-
-<div class="programme">
-
-<div class="programme-icon">
-🌍
-</div>
-
-<h3>
-Men's Wellness Campaigns
-</h3>
-
-<p>
-
-Use public education, social media and community events
-to challenge stigma and encourage healthy conversations
-about men's wellbeing.
-
-</p>
-
-</div>
-
-</div>
+    </div>
 
 </section>
 
-<!-- =========================
-     GET SUPPORT
-========================= -->
 
-<section class="support" id="support">
+<!-- SUPPORT -->
 
-<h2 class="section-title">
+<section id="support" class="support">
 
-Get Support
+    <h2 class="section-title">Get Support</h2>
 
-</h2>
+    <p class="section-intro">
+        If you would like to talk about Strong Enough to Speak,
+        ask about our programmes or find out about available support,
+        you can contact us directly.
+    </p>
 
-<p class="section-intro">
+    <div class="contact-box">
 
-Asking for help is not a sign of weakness. It can be an
-important step towards taking care of yourself.
+        <h3>Talk to Strong Enough to Speak</h3>
 
-</p>
+        <p>
+            You can contact Clayton through WhatsApp or email.
+        </p>
 
-<div class="support-grid">
+        <div class="contact-buttons">
 
-<div class="support-card">
+            <a class="btn btn-whatsapp"
+               href="https://wa.me/263783625912?text=Hello%20Clayton%2C%20I%20found%20Strong%20Enough%20to%20Speak%20online%20and%20I%20would%20like%20to%20talk."
+               target="_blank">
+                💬 WhatsApp Us
+            </a>
 
-<h3>
-🗣️ I Want Someone to Talk To
-</h3>
+            <a class="btn btn-email"
+               href="mailto:bandaclayton77@gmail.com?subject=Strong%20Enough%20to%20Speak%20Enquiry">
+                📧 Send an Email
+            </a>
 
-<p>
+        </div>
 
-If you are struggling, talking to a trusted person can be
-a useful first step. Strong Enough to Speak aims to provide
-peer-support opportunities and information about available
-help.
+    </div>
 
-</p>
 
-<br>
+    <div class="notice">
 
-<a href="#join" class="btn">
-Request Support
-</a>
+        <strong>Important:</strong>
 
-</div>
+        Strong Enough to Speak is not an emergency service and
+        peer support does not replace professional mental-health
+        assessment or treatment.
 
-<div class="support-card">
+        If you or someone else is in immediate danger or at risk
+        of serious harm, please contact your local emergency services
+        or go to the nearest health facility.
 
-<h3>
-🧠 I Want to Learn
-</h3>
-
-<p>
-
-Explore information about depression, anxiety, stress,
-trauma, substance use and emotional wellbeing.
-
-</p>
-
-<br>
-
-<a href="#resources" class="btn">
-View Resources
-</a>
-
-</div>
-
-<div class="support-card">
-
-<h3>
-👨‍⚕️ I Need Professional Help
-</h3>
-
-<p>
-
-Peer support is not a replacement for professional
-assessment or treatment. We aim to help people identify
-appropriate professional services.
-
-</p>
-
-</div>
-
-<div class="support-card">
-
-<h3>
-🤝 I Want to Help Someone
-</h3>
-
-<p>
-
-Listen without judgement, check in regularly, take concerns
-seriously and encourage professional help when appropriate.
-
-</p>
-
-</div>
-
-</div>
-
-<div class="warning">
-
-<strong>
-Important:
-</strong>
-
-Strong Enough to Speak is not an emergency service.
-
-If someone is in immediate danger or may harm themselves
-or another person, seek urgent assistance from an appropriate
-emergency service, hospital or qualified professional.
-
-</div>
+    </div>
 
 </section>
 
-<!-- =========================
-     JOIN
-========================= -->
 
-<section id="join">
+<!-- PARTNERS -->
 
-<h2 class="section-title">
+<section id="partners" class="partnership">
 
-Join Strong Enough to Speak
+    <h2 class="section-title">Partner With Us</h2>
 
-</h2>
+    <p class="section-intro">
+        We welcome partnerships with organisations and professionals
+        interested in improving men's mental and emotional wellbeing.
+    </p>
 
-<p class="section-intro">
+    <div class="cards">
 
-Register your interest in participating in discussions,
-wellness activities, awareness programmes or volunteering.
+        <div class="card">
+            <h3>NGOs</h3>
 
-</p>
+            <p>
+                Organisations working in mental health, youth development,
+                public health, community development and wellbeing.
+            </p>
+        </div>
 
-<form class="form" onsubmit="joinForm(event)">
 
-<label>
-Name
-</label>
+        <div class="card">
+            <h3>Universities</h3>
 
-<input
-type="text"
-placeholder="Your name"
+            <p>
+                Opportunities for student wellbeing programmes,
+                research, awareness campaigns and community outreach.
+            </p>
+        </div>
 
->
 
-<label>
-Age Range
-</label>
+        <div class="card">
+            <h3>Mental Health Professionals</h3>
 
-<select>
+            <p>
+                Professionals can support through training, supervision,
+                education and appropriate referral pathways.
+            </p>
+        </div>
 
-<option>18–24</option>
 
-<option>25–34</option>
+        <div class="card">
+            <h3>Businesses & Sponsors</h3>
 
-<option>35–44</option>
+            <p>
+                Support can include funding, venues, equipment,
+                awareness materials, transport and volunteer support.
+            </p>
+        </div>
 
-<option>45–54</option>
+    </div>
 
-<option>55+</option>
 
-<option>Prefer not to say</option>
+    <div class="contact-box" style="margin-top:35px;">
 
-</select>
+        <h3>Interested in Partnering?</h3>
 
-<label>
-Email or Phone
-</label>
+        <p>
+            We would welcome an opportunity to discuss how we can
+            work together.
+        </p>
 
-<input
-type="text"
-placeholder="Your contact details"
+        <div class="contact-buttons">
 
->
+            <a class="btn btn-email"
+               href="mailto:bandaclayton77@gmail.com?subject=Strong%20Enough%20to%20Speak%20Partnership%20Enquiry">
+                🤝 Contact Us About Partnership
+            </a>
 
-<label>
-What are you interested in?
-</label>
+            <a class="btn btn-whatsapp"
+               href="https://wa.me/263783625912?text=Hello%20Clayton%2C%20I%20am%20interested%20in%20partnering%20with%20Strong%20Enough%20to%20Speak."
+               target="_blank">
+                💬 Discuss on WhatsApp
+            </a>
 
-<select>
+        </div>
 
-<option>
-Men's Talk Circles
-</option>
-
-<option>
-Mental Health Awareness
-</option>
-
-<option>
-Sport & Wellness
-</option>
-
-<option>
-Peer Support
-</option>
-
-<option>
-Campus Outreach
-</option>
-
-<option>
-Community Outreach
-</option>
-
-<option>
-Volunteering
-</option>
-
-</select>
-
-<label>
-Message
-</label>
-
-<textarea
-placeholder="Tell us how you would like to participate. Please do not include detailed medical or crisis information."
-></textarea>
-
-<button
-type="submit"
-class="btn"
-
->
-
-Submit Interest
-
-</button>
-
-<p class="form-note">
-
-Privacy note: This prototype does not currently store
-or send your information. A secure submission system will
-be connected before public launch.
-
-</p>
-
-</form>
+    </div>
 
 </section>
 
-<!-- =========================
-     RESOURCES
-========================= -->
 
-<section class="about" id="resources">
+<!-- CONTACT -->
 
-<h2 class="section-title">
+<section id="contact">
 
-Mental Health Resources
+    <h2 class="section-title">Contact Us</h2>
 
-</h2>
+    <div class="contact-box">
 
-<p class="section-intro">
+        <h3>Strong Enough to Speak</h3>
 
-Simple information to help start conversations about
-mental and emotional wellbeing.
+        <div class="contact-info">
 
-</p>
+            <p>
+                <strong>Founder & Programme Coordinator:</strong>
+                Clayton T. Banda
+            </p>
 
-<div class="resource">
+            <p>
+                Health Psychology Student
+            </p>
 
-<h3>
-Depression
-</h3>
+            <p>
+                Certified Peer Educator & Peer Counsellor
+            </p>
 
-<p>
+            <p>
+                Midlands State University
+            </p>
 
-Depression can affect mood, energy, motivation, sleep,
-relationships and everyday functioning. Some people may
-also experience irritability, withdrawal or changes in
-behaviour.
+            <p>
+                <strong>Email:</strong>
+                <a href="mailto:bandaclayton77@gmail.com">
+                    bandaclayton77@gmail.com
+                </a>
+            </p>
 
-</p>
+            <p>
+                <strong>WhatsApp:</strong>
+                <a href="https://wa.me/263783625912" target="_blank">
+                    Chat with us
+                </a>
+            </p>
 
-</div>
+        </div>
 
-<div class="resource">
-
-<h3>
-Anxiety
-</h3>
-
-<p>
-
-Anxiety may involve excessive worry, restlessness,
-difficulty concentrating, avoidance or physical symptoms
-such as tension and rapid heartbeat.
-
-</p>
-
-</div>
-
-<div class="resource">
-
-<h3>
-Stress
-</h3>
-
-<p>
-
-Healthy routines, physical activity, adequate sleep,
-social connection and seeking support can help people
-manage stress.
-
-</p>
-
-</div>
-
-<div class="resource">
-
-<h3>
-Emotional Wellbeing
-</h3>
-
-<p>
-
-Recognising emotions and communicating them appropriately
-can contribute to healthier relationships and better
-decision-making.
-
-</p>
-
-</div>
-
-<div class="resource">
-
-<h3>
-Supporting Another Man
-</h3>
-
-<p>
-
-Listen without judgement, check in, take concerns seriously
-and encourage appropriate professional support when needed.
-
-</p>
-
-</div>
+    </div>
 
 </section>
 
-<!-- =========================
-     PARTNERS
-========================= -->
 
-<section id="partners">
-
-<h2 class="section-title">
-
-Partner With Us
-
-</h2>
-
-<p class="section-intro">
-
-Strong Enough to Speak cannot create lasting change alone.
-We welcome organisations and professionals who want to
-contribute to men's wellbeing.
-
-</p>
-
-<div class="partner-grid">
-
-<div class="partner-card">
-
-<div class="icon">
-🏢
-</div>
-
-<h3>
-NGOs
-</h3>
-
-<p>
-
-Mental-health, youth development, community development,
-substance-use prevention and wellbeing organisations.
-
-</p>
-
-</div>
-
-<div class="partner-card">
-
-<div class="icon">
-👨‍⚕️
-</div>
-
-<h3>
-Professionals
-</h3>
-
-<p>
-
-Psychologists, counsellors, social workers, healthcare
-professionals and other appropriately qualified practitioners.
-
-</p>
-
-</div>
-
-<div class="partner-card">
-
-<div class="icon">
-🎓
-</div>
-
-<h3>
-Universities
-</h3>
-
-<p>
-
-Institutions interested in research, student wellbeing,
-community outreach and mental-health education.
-
-</p>
-
-</div>
-
-<div class="partner-card">
-
-<div class="icon">
-💼
-</div>
-
-<h3>
-Businesses
-</h3>
-
-<p>
-
-Businesses interested in supporting community wellbeing
-through sponsorship, resources or employee-volunteering
-initiatives.
-
-</p>
-
-</div>
-
-<div class="partner-card">
-
-<div class="icon">
-🌍
-</div>
-
-<h3>
-Community Groups
-</h3>
-
-<p>
-
-Local organisations that can help with outreach,
-awareness campaigns and community activities.
-
-</p>
-
-</div>
-
-<div class="partner-card">
-
-<div class="icon">
-❤️
-</div>
-
-<h3>
-Volunteers
-</h3>
-
-<p>
-
-People who want to contribute their time, skills and
-energy to men's wellbeing initiatives.
-
-</p>
-
-</div>
-
-</div>
-
-<br><br>
-
-<form class="form" onsubmit="partnerForm(event)">
-
-<h3>
-Partnership Enquiry
-</h3>
-
-<label>
-Organisation / Professional Name
-</label>
-
-<input
-type="text"
-placeholder="Organisation or professional name"
-required
-
->
-
-<label>
-Your Name
-</label>
-
-<input
-type="text"
-placeholder="Your name"
-required
-
->
-
-<label>
-Email
-</label>
-
-<input
-type="email"
-placeholder="Your email"
-required
-
->
-
-<label>
-Partnership Type
-</label>
-
-<select>
-
-<option>
-NGO / Community Organisation
-</option>
-
-<option>
-Mental-Health Professional
-</option>
-
-<option>
-University / Educational Institution
-</option>
-
-<option>
-Business / Sponsor
-</option>
-
-<option>
-Community Group
-</option>
-
-<option>
-Volunteer
-</option>
-
-<option>
-Other
-</option>
-
-</select>
-
-<label>
-How would you like to support us?
-</label>
-
-<textarea
-placeholder="For example: training, professional referrals, sponsorship, venues, outreach or educational resources."
-required
-></textarea>
-
-<button
-type="submit"
-class="btn"
-
->
-
-Submit Partnership Enquiry
-
-</button>
-
-<p class="form-note">
-
-This prototype does not currently send or store submissions.
-A secure system will be connected before launch.
-
-</p>
-
-</form>
-
-</section>
-
-<!-- =========================
-     CONTACT
-========================= -->
-
-<section class="about">
-
-<h2 class="section-title">
-
-Contact Strong Enough to Speak
-
-</h2>
-
-<div class="contact-box">
-
-<h3>
-Strong Enough to Speak
-</h3>
-
-<p>
-Founder: <strong>Clayton T. Banda</strong>
-</p>
-
-<p>
-Health Psychology Student
-</p>
-
-<p>
-Certified Peer Educator & Peer Counsellor
-</p>
-
-<p>
-Midlands State University
-</p>
-
-<br>
-
-<p>
-
-<strong>
-Programme email: Coming soon
-</strong>
-
-</p>
-
-<br>
-
-<p>
-
-We are currently developing our official communication
-channels and referral network.
-
-</p>
-
-</div>
-
-</section>
-
-<!-- =========================
-     FOOTER
-========================= -->
+<!-- FOOTER -->
 
 <footer>
 
-<p>
-<strong>
-Strong Enough to Speak
-</strong>
-</p>
+    <h3>Strong Enough to Speak</h3>
 
-<p>
-Men's Mental Health & Wellness Initiative
-</p>
+    <p>
+        Men's Mental Health & Wellness Initiative
+    </p>
 
-<p>
-Founded by Clayton T. Banda
-</p>
+    <p>
+        Founded by Clayton T. Banda
+    </p>
 
-<p>
-"You don't have to face everything alone."
-</p>
-
-<br>
-
-<p class="footer-small">
-
-© 2026 Strong Enough to Speak.
-
-This platform provides mental-health education and
-peer-support pathways. It does not replace professional
-diagnosis, treatment or emergency services.
-
-</p>
+    <p style="margin-top:15px;">
+        © 2026 Strong Enough to Speak. All rights reserved.
+    </p>
 
 </footer>
 
-<!-- =========================
-     JAVASCRIPT
-========================= -->
-
-<script>
-
-
-function joinForm(event){
-
-event.preventDefault();
-
-alert(
-
-"Thank you for your interest in Strong Enough to Speak. " +
-
-"This website is currently a prototype. " +
-
-"The registration system will be connected securely before launch."
-
-);
-
-}
-
-
-function partnerForm(event){
-
-event.preventDefault();
-
-alert(
-
-"Thank you for your interest in partnering with Strong Enough to Speak. " +
-
-"The partnership system will be connected securely before launch."
-
-);
-
-}
-
-
-</script>
-
 </body>
-
 </html>
