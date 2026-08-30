@@ -1,765 +1,806 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Strong Enough to Speak | Men's Mental Health & Wellness</title>
+```
+<title>Strong Enough to Speak | Men's Mental Health & Wellness</title>
 
-    <meta name="description" content="Strong Enough to Speak is a men's mental health and wellness initiative founded by Clayton T. Banda, a Health Psychology student and certified peer educator and peer counsellor at Midlands State University.">
+<meta name="description" content="Strong Enough to Speak is a men's mental health and wellness initiative founded by Clayton T. Banda, a Health Psychology student and certified peer educator and peer counsellor at Midlands State University.">
 
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
 
-        html {
-            scroll-behavior: smooth;
-        }
+    html {
+        scroll-behavior: smooth;
+    }
 
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            line-height: 1.6;
-            color: #222;
-            background: #f5f7fa;
-        }
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 1.6;
+        color: #222;
+        background: #f5f7fa;
+    }
+
+    header {
+        background: #102a43;
+        color: white;
+        padding: 15px 7%;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+    }
+
+    /* LOGO */
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 1.2rem;
+        font-weight: bold;
+        white-space: nowrap;
+    }
+
+    .logo img {
+        width: 48px;
+        height: 48px;
+        object-fit: contain;
+        border-radius: 50%;
+    }
+
+    nav ul {
+        display: flex;
+        list-style: none;
+        gap: 22px;
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+        font-weight: 600;
+    }
+
+    nav a:hover {
+        text-decoration: underline;
+    }
+
+    /* HERO */
+    .hero {
+        background: linear-gradient(135deg, #102a43, #1f4e79);
+        color: white;
+        padding: 100px 7%;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 3.2rem;
+        margin-bottom: 15px;
+    }
+
+    .hero h2 {
+        font-size: 1.5rem;
+        font-weight: normal;
+        margin-bottom: 20px;
+    }
+
+    .hero p {
+        max-width: 800px;
+        margin: 0 auto 30px;
+        font-size: 1.1rem;
+    }
+
+    .buttons {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .btn {
+        display: inline-block;
+        padding: 13px 24px;
+        border-radius: 7px;
+        text-decoration: none;
+        font-weight: bold;
+        border: none;
+        cursor: pointer;
+        font-size: 1rem;
+    }
+
+    .btn-primary {
+        background: white;
+        color: #102a43;
+    }
+
+    .btn-whatsapp {
+        background: #25D366;
+        color: white;
+    }
+
+    .btn-email {
+        background: #1f4e79;
+        color: white;
+    }
+
+    .btn:hover {
+        opacity: 0.9;
+        transform: translateY(-1px);
+    }
+
+    /* SECTIONS */
+    section {
+        padding: 70px 7%;
+    }
+
+    .section-title {
+        text-align: center;
+        color: #102a43;
+        margin-bottom: 15px;
+        font-size: 2.2rem;
+    }
+
+    .section-intro {
+        max-width: 800px;
+        margin: 0 auto 40px;
+        text-align: center;
+        color: #555;
+    }
+
+    .about {
+        background: white;
+    }
+
+    /* FOUNDER */
+    .founder {
+        max-width: 900px;
+        margin: auto;
+        background: #f0f4f8;
+        padding: 35px;
+        border-radius: 12px;
+        text-align: center;
+    }
+
+    .founder h3 {
+        color: #102a43;
+        margin-bottom: 10px;
+        font-size: 1.6rem;
+    }
+
+    .quote {
+        margin-top: 25px;
+        font-size: 1.4rem;
+        font-weight: bold;
+        color: #1f4e79;
+    }
+
+    /* CARDS */
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 22px;
+        max-width: 1100px;
+        margin: auto;
+    }
+
+    .card {
+        background: white;
+        padding: 28px;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+        transform: translateY(-4px);
+    }
+
+    .card h3 {
+        color: #102a43;
+        margin-bottom: 12px;
+    }
+
+    .card ul {
+        padding-left: 20px;
+    }
+
+    /* SUPPORT */
+    .support {
+        background: #eaf2f8;
+    }
+
+    .contact-box {
+        max-width: 850px;
+        margin: auto;
+        background: white;
+        padding: 35px;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        text-align: center;
+    }
+
+    .contact-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap;
+        margin-top: 25px;
+    }
+
+    .contact-info {
+        margin-top: 25px;
+    }
+
+    .contact-info p {
+        margin: 8px 0;
+    }
+
+    .contact-info a {
+        color: #1f4e79;
+        font-weight: bold;
+    }
+
+    /* PARTNERS */
+    .partnership {
+        background: white;
+    }
+
+    .notice {
+        max-width: 850px;
+        margin: 35px auto 0;
+        padding: 20px;
+        background: #fff8e1;
+        border-left: 5px solid #d89b00;
+        border-radius: 6px;
+    }
+
+    /* FOOTER */
+    footer {
+        background: #102a43;
+        color: white;
+        text-align: center;
+        padding: 35px 7%;
+    }
+
+    footer a {
+        color: white;
+    }
+
+    /* MOBILE */
+    @media (max-width: 750px) {
 
         header {
-            background: #102a43;
-            color: white;
-            padding: 18px 7%;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+            padding: 15px 5%;
         }
 
         nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 20px;
+            flex-direction: column;
         }
 
         .logo {
-            .logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 1.2rem;
-    font-weight: bold;
-}
-
-.logo img {
-    width: 45px;
-    height: 45px;
-    object-fit: contain;
-    border-radius: 50%;
-}
-    
+            justify-content: center;
         }
 
         nav ul {
-            display: flex;
-            list-style: none;
-            gap: 22px;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px 15px;
         }
 
         nav a {
-            color: white;
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        nav a:hover {
-            text-decoration: underline;
+            font-size: 0.9rem;
         }
 
         .hero {
-            background: linear-gradient(135deg, #102a43, #1f4e79);
-            color: white;
-            padding: 100px 7%;
-            text-align: center;
+            padding: 70px 6%;
         }
 
         .hero h1 {
-            font-size: 3.2rem;
-            margin-bottom: 15px;
+            font-size: 2.3rem;
         }
 
         .hero h2 {
-            font-size: 1.5rem;
-            font-weight: normal;
-            margin-bottom: 20px;
+            font-size: 1.2rem;
         }
 
         .hero p {
-            max-width: 800px;
-            margin: 0 auto 30px;
-            font-size: 1.1rem;
-        }
-
-        .buttons {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 13px 24px;
-            border-radius: 7px;
-            text-decoration: none;
-            font-weight: bold;
-            border: none;
-            cursor: pointer;
             font-size: 1rem;
         }
 
-        .btn-primary {
-            background: white;
-            color: #102a43;
-        }
-
-        .btn-whatsapp {
-            background: #25D366;
-            color: white;
-        }
-
-        .btn-email {
-            background: #1f4e79;
-            color: white;
-        }
-
         section {
-            padding: 70px 7%;
+            padding: 55px 6%;
         }
 
         .section-title {
-            text-align: center;
-            color: #102a43;
-            margin-bottom: 15px;
-            font-size: 2.2rem;
+            font-size: 1.8rem;
         }
 
-        .section-intro {
-            max-width: 800px;
-            margin: 0 auto 40px;
-            text-align: center;
-            color: #555;
-        }
-
-        .about {
-            background: white;
-        }
-
-        .founder {
-            max-width: 900px;
-            margin: auto;
-            background: #f0f4f8;
-            padding: 35px;
-            border-radius: 12px;
-            text-align: center;
-        }
-
-        .founder h3 {
-            color: #102a43;
-            margin-bottom: 10px;
-            font-size: 1.6rem;
-        }
-
-        .quote {
-            margin-top: 25px;
-            font-size: 1.4rem;
-            font-weight: bold;
-            color: #1f4e79;
-        }
-
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 22px;
-            max-width: 1100px;
-            margin: auto;
-        }
-
-        .card {
-            background: white;
-            padding: 28px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-        }
-
-        .card h3 {
-            color: #102a43;
-            margin-bottom: 12px;
-        }
-
-        .card ul {
-            padding-left: 20px;
-        }
-
-        .support {
-            background: #eaf2f8;
-        }
-
+        .founder,
         .contact-box {
-            max-width: 850px;
-            margin: auto;
-            background: white;
-            padding: 35px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-            text-align: center;
+            padding: 25px 20px;
         }
+    }
+</style>
+```
 
-        .contact-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-            margin-top: 25px;
-        }
-
-        .contact-info {
-            margin-top: 25px;
-        }
-
-        .contact-info p {
-            margin: 8px 0;
-        }
-
-        .partnership {
-            background: white;
-        }
-
-        .notice {
-            max-width: 850px;
-            margin: 35px auto 0;
-            padding: 20px;
-            background: #fff8e1;
-            border-left: 5px solid #d89b00;
-            border-radius: 6px;
-        }
-
-        footer {
-            background: #102a43;
-            color: white;
-            text-align: center;
-            padding: 35px 7%;
-        }
-
-        footer a {
-            color: white;
-        }
-
-        @media (max-width: 750px) {
-
-            nav {
-                flex-direction: column;
-            }
-
-            nav ul {
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 12px;
-            }
-
-            .hero {
-                padding: 70px 6%;
-            }
-
-            .hero h1 {
-                font-size: 2.3rem;
-            }
-
-            section {
-                padding: 55px 6%;
-            }
-        }
-    </style>
 </head>
 
 <body>
 
+<!-- HEADER -->
+
 <header>
     <nav>
-        <div class="logo">
-    <img src="logo.png" alt="Strong Enough to Speak Logo">
-    <span>Strong Enough to Speak</span>
-</div>
 
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#programmes">Programmes</a></li>
-            <li><a href="#team">Join Us</a></li>
-            <li><a href="#support">Get Support</a></li>
-            <li><a href="#partners">Partners</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+```
+    <div class="logo">
+        <img src="logo.png" alt="Strong Enough to Speak Logo">
+        <span>Strong Enough to Speak</span>
+    </div>
+
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#programmes">Programmes</a></li>
+        <li><a href="#team">Join Us</a></li>
+        <li><a href="#support">Get Support</a></li>
+        <li><a href="#partners">Partners</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+
+</nav>
+```
+
 </header>
-
 
 <!-- HERO -->
 
 <section class="hero">
 
-    <h1>Strong Enough to Speak</h1>
+```
+<h1>Strong Enough to Speak</h1>
 
-    <h2>Men's Mental Health & Wellness Initiative</h2>
+<h2>Men's Mental Health & Wellness Initiative</h2>
 
-    <p>
-        Creating safe spaces where men can talk, connect, support one another
-        and seek appropriate help without shame.
-    </p>
+<p>
+    Creating safe spaces where men can talk, connect, support one another
+    and seek appropriate help without shame.
+</p>
 
-    <div class="buttons">
+<div class="buttons">
 
-        <a class="btn btn-primary" href="#about">
-            Learn More
-        </a>
+    <a class="btn btn-primary" href="#about">
+        Learn More
+    </a>
 
-        <a class="btn btn-whatsapp"
-           href="https://wa.me/263783625912?text=Hello%20Strong%20Enough%20to%20Speak%2C%20I%20would%20like%20to%20know%20more%20about%20the%20initiative."
-           target="_blank">
-            Chat on WhatsApp
-        </a>
+    <a class="btn btn-whatsapp"
+       href="https://wa.me/263783625912?text=Hello%20Strong%20Enough%20to%20Speak%2C%20I%20would%20like%20to%20know%20more%20about%20the%20initiative."
+       target="_blank">
+        Chat on WhatsApp
+    </a>
 
-    </div>
+</div>
+```
 
 </section>
-
 
 <!-- ABOUT -->
 
 <section id="about" class="about">
 
-    <h2 class="section-title">About Strong Enough to Speak</h2>
+```
+<h2 class="section-title">About Strong Enough to Speak</h2>
 
-    <p class="section-intro">
-        Strong Enough to Speak is an emerging men's mental-health and wellness
-        initiative focused on awareness, peer connection, healthy coping,
-        early help-seeking and appropriate professional referral.
+<p class="section-intro">
+    Strong Enough to Speak is an emerging men's mental-health and wellness
+    initiative focused on awareness, peer connection, healthy coping,
+    early help-seeking and appropriate professional referral.
+</p>
+
+<div class="founder">
+
+    <h3>Founded by Clayton T. Banda</h3>
+
+    <p>
+        Clayton T. Banda is a Health Psychology student at
+        Midlands State University and a Certified Peer Educator
+        and Peer Counsellor.
     </p>
 
-    <div class="founder">
+    <p class="quote">
+        "You don't have to face everything alone."
+    </p>
 
-        <h3>Founded by Clayton T. Banda</h3>
-
-        <p>
-            Clayton T. Banda is a Health Psychology student at
-            Midlands State University and a Certified Peer Educator
-            and Peer Counsellor.
-        </p>
-
-        <p class="quote">
-            "You don't have to face everything alone."
-        </p>
-
-    </div>
+</div>
+```
 
 </section>
-
 
 <!-- MISSION -->
 
 <section>
 
-    <h2 class="section-title">Our Mission</h2>
+```
+<h2 class="section-title">Our Mission</h2>
 
-    <p class="section-intro">
-        To promote men's mental and emotional wellbeing by creating safe
-        spaces for conversation, connection, education, peer support and
-        access to appropriate professional services.
-    </p>
+<p class="section-intro">
+    To promote men's mental and emotional wellbeing by creating safe
+    spaces for conversation, connection, education, peer support and
+    access to appropriate professional services.
+</p>
+```
 
 </section>
-    <!-- FOUNDING TEAM -->
+
+<!-- FOUNDING TEAM -->
 
 <section id="team" class="support">
 
-    <h2 class="section-title">Join Our Founding Team</h2>
+```
+<h2 class="section-title">Join Our Founding Team</h2>
 
-    <p class="section-intro">
-        Strong Enough to Speak is currently building a small founding team
-        of passionate students who want to make a positive difference in
-        men's mental health and wellbeing.
+<p class="section-intro">
+    Strong Enough to Speak is currently building a small founding team
+    of passionate students who want to make a positive difference in
+    men's mental health and wellbeing.
+</p>
+
+<div class="cards">
+
+    <div class="card">
+        <h3>Deputy Programme Coordinator</h3>
+        <p>
+            Supports the Founder, coordinates team activities and helps
+            ensure that programmes are carried out effectively.
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>Mental Health & Peer Support Coordinator</h3>
+        <p>
+            Helps organise mental-health discussions, peer-support
+            activities and connections with qualified professionals.
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>Outreach & Community Engagement Coordinator</h3>
+        <p>
+            Helps reach students, recruit participants and build
+            relationships with student and community groups.
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>Communications & Digital Media Coordinator</h3>
+        <p>
+            Helps manage social media, website content, awareness
+            campaigns and digital communication.
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>Events & Logistics Coordinator</h3>
+        <p>
+            Helps organise venues, schedules, attendance, equipment
+            and other arrangements for programme activities.
+        </p>
+    </div>
+
+</div>
+
+<div class="contact-box" style="margin-top:35px;">
+
+    <h3>Interested in Joining?</h3>
+
+    <p>
+        If you are reliable, passionate about men's wellbeing and
+        willing to volunteer, we would like to hear from you.
     </p>
 
-    <div class="cards">
+    <div class="contact-buttons">
 
-        <div class="card">
-            <h3>Deputy Programme Coordinator</h3>
-            <p>
-                Supports the Founder, coordinates team activities and helps
-                ensure that programmes are carried out effectively.
-            </p>
-        </div>
+        <a class="btn btn-whatsapp"
+           href="https://wa.me/263783625912?text=Hello%20Clayton%2C%20I%20am%20interested%20in%20joining%20the%20Strong%20Enough%20to%20Speak%20founding%20team."
+           target="_blank">
+            💬 Apply via WhatsApp
+        </a>
 
-        <div class="card">
-            <h3>Mental Health & Peer Support Coordinator</h3>
-            <p>
-                Helps organise mental-health discussions, peer-support
-                activities and connections with qualified professionals.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>Outreach & Community Engagement Coordinator</h3>
-            <p>
-                Helps reach students, recruit participants and build
-                relationships with student and community groups.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>Communications & Digital Media Coordinator</h3>
-            <p>
-                Helps manage social media, website content, awareness
-                campaigns and digital communication.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>Events & Logistics Coordinator</h3>
-            <p>
-                Helps organise venues, schedules, attendance, equipment
-                and other arrangements for programme activities.
-            </p>
-        </div>
+        <a class="btn btn-email"
+           href="mailto:bandaclayton77@gmail.com?subject=Founding%20Team%20Application">
+            📧 Apply via Email
+        </a>
 
     </div>
 
-    <div class="contact-box" style="margin-top:35px;">
-
-        <h3>Interested in Joining?</h3>
-
-        <p>
-            If you are reliable, passionate about men's wellbeing and
-            willing to volunteer, we would like to hear from you.
-        </p>
-
-        <div class="contact-buttons">
-
-            <a class="btn btn-whatsapp"
-               href="https://wa.me/263783625912?text=Hello%20Clayton%2C%20I%20am%20interested%20in%20joining%20the%20Strong%20Enough%20to%20Speak%20founding%20team."
-               target="_blank">
-                💬 Apply via WhatsApp
-            </a>
-
-            <a class="btn btn-email"
-               href="mailto:bandaclayton77@gmail.com?subject=Founding%20Team%20Application">
-                📧 Apply via Email
-            </a>
-
-        </div>
-
-    </div>
+</div>
+```
 
 </section>
-
 
 <!-- PROGRAMMES -->
 
 <section id="programmes">
 
-    <h2 class="section-title">Our Programmes</h2>
+```
+<h2 class="section-title">Our Programmes</h2>
 
-    <p class="section-intro">
-        Our activities are designed to make conversations about men's
-        mental health more accessible and supportive.
-    </p>
+<p class="section-intro">
+    Our activities are designed to make conversations about men's
+    mental health more accessible and supportive.
+</p>
 
-    <div class="cards">
+<div class="cards">
 
-        <div class="card">
-            <h3>🧠 Mental Health Awareness</h3>
-
-            <p>
-                Educational sessions covering mental health, depression,
-                anxiety, stress, trauma, substance-use concerns,
-                healthy coping and help-seeking.
-            </p>
-        </div>
-
-
-        <div class="card">
-            <h3>🗣️ Men's Talk Circles</h3>
-
-            <p>
-                Structured conversations where men can discuss topics such
-                as relationships, stress, masculinity, academic pressure,
-                family responsibilities and emotional wellbeing.
-            </p>
-        </div>
-
-
-        <div class="card">
-            <h3>🤝 Peer Support</h3>
-
-            <p>
-                Peer-based listening, encouragement and emotional support
-                within clearly defined peer-support boundaries.
-            </p>
-        </div>
-
-
-        <div class="card">
-            <h3>⚽ Sport & Wellness</h3>
-
-            <p>
-                Sport, physical activity and recreational activities
-                designed to encourage healthy routines and positive
-                social connection.
-            </p>
-        </div>
-
-
-        <div class="card">
-            <h3>🎓 Campus Outreach</h3>
-
-            <p>
-                Mental-health awareness campaigns, discussions,
-                workshops and wellness activities for students.
-            </p>
-        </div>
-
-
-        <div class="card">
-            <h3>🏘️ Community Outreach</h3>
-
-            <p>
-                Community-based mental-health awareness and men's
-                wellness activities developed through partnerships.
-            </p>
-        </div>
-
-
-        <div class="card">
-            <h3>🏥 Professional Referral</h3>
-
-            <p>
-                Building relationships with qualified professionals
-                and established organisations so participants can
-                access appropriate specialised support.
-            </p>
-        </div>
-
+    <div class="card">
+        <h3>🧠 Mental Health Awareness</h3>
+        <p>
+            Educational sessions covering mental health, depression,
+            anxiety, stress, trauma, substance-use concerns,
+            healthy coping and help-seeking.
+        </p>
     </div>
 
-</section>
+    <div class="card">
+        <h3>🗣️ Men's Talk Circles</h3>
+        <p>
+            Structured conversations where men can discuss topics such
+            as relationships, stress, masculinity, academic pressure,
+            family responsibilities and emotional wellbeing.
+        </p>
+    </div>
 
+    <div class="card">
+        <h3>🤝 Peer Support</h3>
+        <p>
+            Peer-based listening, encouragement and emotional support
+            within clearly defined peer-support boundaries.
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>⚽ Sport & Wellness</h3>
+        <p>
+            Sport, physical activity and recreational activities
+            designed to encourage healthy routines and positive
+            social connection.
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>🎓 Campus Outreach</h3>
+        <p>
+            Mental-health awareness campaigns, discussions,
+            workshops and wellness activities for students.
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>🏘️ Community Outreach</h3>
+        <p>
+            Community-based mental-health awareness and men's
+            wellness activities developed through partnerships.
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>🏥 Professional Referral</h3>
+        <p>
+            Building relationships with qualified professionals
+            and established organisations so participants can
+            access appropriate specialised support.
+        </p>
+    </div>
+
+</div>
+```
+
+</section>
 
 <!-- SUPPORT -->
 
 <section id="support" class="support">
 
-    <h2 class="section-title">Get Support</h2>
+```
+<h2 class="section-title">Get Support</h2>
 
-    <p class="section-intro">
-        If you would like to talk about Strong Enough to Speak,
-        ask about our programmes or find out about available support,
-        you can contact us directly.
+<p class="section-intro">
+    If you would like to talk about Strong Enough to Speak,
+    ask about our programmes or find out about available support,
+    you can contact us directly.
+</p>
+
+<div class="contact-box">
+
+    <h3>Talk to Strong Enough to Speak</h3>
+
+    <p>
+        You can contact Clayton through WhatsApp or email.
     </p>
 
-    <div class="contact-box">
+    <div class="contact-buttons">
 
-        <h3>Talk to Strong Enough to Speak</h3>
+        <a class="btn btn-whatsapp"
+           href="https://wa.me/263783625912?text=Hello%20Clayton%2C%20I%20found%20Strong%20Enough%20to%20Speak%20online%20and%20I%20would%20like%20to%20talk."
+           target="_blank">
+            💬 WhatsApp Us
+        </a>
 
-        <p>
-            You can contact Clayton through WhatsApp or email.
-        </p>
-
-        <div class="contact-buttons">
-
-            <a class="btn btn-whatsapp"
-               href="https://wa.me/263783625912?text=Hello%20Clayton%2C%20I%20found%20Strong%20Enough%20to%20Speak%20online%20and%20I%20would%20like%20to%20talk."
-               target="_blank">
-                💬 WhatsApp Us
-            </a>
-
-            <a class="btn btn-email"
-               href="mailto:bandaclayton77@gmail.com?subject=Strong%20Enough%20to%20Speak%20Enquiry">
-                📧 Send an Email
-            </a>
-
-        </div>
+        <a class="btn btn-email"
+           href="mailto:bandaclayton77@gmail.com?subject=Strong%20Enough%20to%20Speak%20Enquiry">
+            📧 Send an Email
+        </a>
 
     </div>
 
+</div>
 
-    <div class="notice">
+<div class="notice">
 
-        <strong>Important:</strong>
+    <strong>Important:</strong>
 
-        Strong Enough to Speak is not an emergency service and
-        peer support does not replace professional mental-health
-        assessment or treatment.
+    Strong Enough to Speak is not an emergency service and
+    peer support does not replace professional mental-health
+    assessment or treatment.
 
-        If you or someone else is in immediate danger or at risk
-        of serious harm, please contact your local emergency services
-        or go to the nearest health facility.
+    If you or someone else is in immediate danger or at risk
+    of serious harm, please contact your local emergency services
+    or go to the nearest health facility.
 
-    </div>
+</div>
+```
 
 </section>
-
 
 <!-- PARTNERS -->
 
 <section id="partners" class="partnership">
 
-    <h2 class="section-title">Partner With Us</h2>
+```
+<h2 class="section-title">Partner With Us</h2>
 
-    <p class="section-intro">
-        We welcome partnerships with organisations and professionals
-        interested in improving men's mental and emotional wellbeing.
+<p class="section-intro">
+    We welcome partnerships with organisations and professionals
+    interested in improving men's mental and emotional wellbeing.
+</p>
+
+<div class="cards">
+
+    <div class="card">
+        <h3>NGOs</h3>
+        <p>
+            Organisations working in mental health, youth development,
+            public health, community development and wellbeing.
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>Universities</h3>
+        <p>
+            Opportunities for student wellbeing programmes,
+            research, awareness campaigns and community outreach.
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>Mental Health Professionals</h3>
+        <p>
+            Professionals can support through training, supervision,
+            education and appropriate referral pathways.
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>Businesses & Sponsors</h3>
+        <p>
+            Support can include funding, venues, equipment,
+            awareness materials, transport and volunteer support.
+        </p>
+    </div>
+
+</div>
+
+<div class="contact-box" style="margin-top:35px;">
+
+    <h3>Interested in Partnering?</h3>
+
+    <p>
+        We would welcome an opportunity to discuss how we can
+        work together.
     </p>
 
-    <div class="cards">
+    <div class="contact-buttons">
 
-        <div class="card">
-            <h3>NGOs</h3>
+        <a class="btn btn-email"
+           href="mailto:bandaclayton77@gmail.com?subject=Strong%20Enough%20to%20Speak%20Partnership%20Enquiry">
+            🤝 Contact Us About Partnership
+        </a>
 
-            <p>
-                Organisations working in mental health, youth development,
-                public health, community development and wellbeing.
-            </p>
-        </div>
-
-
-        <div class="card">
-            <h3>Universities</h3>
-
-            <p>
-                Opportunities for student wellbeing programmes,
-                research, awareness campaigns and community outreach.
-            </p>
-        </div>
-
-
-        <div class="card">
-            <h3>Mental Health Professionals</h3>
-
-            <p>
-                Professionals can support through training, supervision,
-                education and appropriate referral pathways.
-            </p>
-        </div>
-
-
-        <div class="card">
-            <h3>Businesses & Sponsors</h3>
-
-            <p>
-                Support can include funding, venues, equipment,
-                awareness materials, transport and volunteer support.
-            </p>
-        </div>
+        <a class="btn btn-whatsapp"
+           href="https://wa.me/263783625912?text=Hello%20Clayton%2C%20I%20am%20interested%20in%20partnering%20with%20Strong%20Enough%20to%20Speak."
+           target="_blank">
+            💬 Discuss on WhatsApp
+        </a>
 
     </div>
 
-
-    <div class="contact-box" style="margin-top:35px;">
-
-        <h3>Interested in Partnering?</h3>
-
-        <p>
-            We would welcome an opportunity to discuss how we can
-            work together.
-        </p>
-
-        <div class="contact-buttons">
-
-            <a class="btn btn-email"
-               href="mailto:bandaclayton77@gmail.com?subject=Strong%20Enough%20to%20Speak%20Partnership%20Enquiry">
-                🤝 Contact Us About Partnership
-            </a>
-
-            <a class="btn btn-whatsapp"
-               href="https://wa.me/263783625912?text=Hello%20Clayton%2C%20I%20am%20interested%20in%20partnering%20with%20Strong%20Enough%20to%20Speak."
-               target="_blank">
-                💬 Discuss on WhatsApp
-            </a>
-
-        </div>
-
-    </div>
+</div>
+```
 
 </section>
-
 
 <!-- CONTACT -->
 
 <section id="contact">
 
-    <h2 class="section-title">Contact Us</h2>
+```
+<h2 class="section-title">Contact Us</h2>
 
-    <div class="contact-box">
+<div class="contact-box">
 
-        <h3>Strong Enough to Speak</h3>
+    <h3>Strong Enough to Speak</h3>
 
-        <div class="contact-info">
+    <div class="contact-info">
 
-            <p>
-                <strong>Founder & Programme Coordinator:</strong>
-                Clayton T. Banda
-            </p>
+        <p>
+            <strong>Founder & Programme Coordinator:</strong>
+            Clayton T. Banda
+        </p>
 
-            <p>
-                Health Psychology Student
-            </p>
+        <p>Health Psychology Student</p>
 
-            <p>
-                Certified Peer Educator & Peer Counsellor
-            </p>
+        <p>Certified Peer Educator & Peer Counsellor</p>
 
-            <p>
-                Midlands State University
-            </p>
+        <p>Midlands State University</p>
 
-            <p>
-                <strong>Email:</strong>
-                <a href="mailto:bandaclayton77@gmail.com">
-                    bandaclayton77@gmail.com
-                </a>
-            </p>
+        <p>
+            <strong>Email:</strong>
+            <a href="mailto:bandaclayton77@gmail.com">
+                bandaclayton77@gmail.com
+            </a>
+        </p>
 
-            <p>
-                <strong>WhatsApp:</strong>
-                <a href="https://wa.me/263783625912" target="_blank">
-                    Chat with us
-                </a>
-            </p>
-
-        </div>
+        <p>
+            <strong>WhatsApp:</strong>
+            <a href="https://wa.me/263783625912" target="_blank">
+                Chat with us
+            </a>
+        </p>
 
     </div>
 
-</section>
+</div>
+```
 
+</section>
 
 <!-- FOOTER -->
 
 <footer>
 
-    <h3>Strong Enough to Speak</h3>
+```
+<h3>Strong Enough to Speak</h3>
 
-    <p>
-        Men's Mental Health & Wellness Initiative
-    </p>
+<p>Men's Mental Health & Wellness Initiative</p>
 
-    <p>
-        Founded by Clayton T. Banda
-    </p>
+<p>Founded by Clayton T. Banda</p>
 
-    <p style="margin-top:15px;">
-        © 2026 Strong Enough to Speak. All rights reserved.
-    </p>
+<p style="margin-top:15px;">
+    © 2026 Strong Enough to Speak. All rights reserved.
+</p>
+```
 
 </footer>
 
