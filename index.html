@@ -44,8 +44,21 @@
         }
 
         .logo {
-            font-size: 1.35rem;
-            font-weight: bold;
+            .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.logo img {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+    border-radius: 50%;
+}
+    
         }
 
         nav ul {
@@ -274,7 +287,10 @@
 
 <header>
     <nav>
-        <div class="logo">Strong Enough to Speak</div>
+        <div class="logo">
+    <img src="logo.png" alt="Strong Enough to Speak Logo">
+    <span>Strong Enough to Speak</span>
+</div>
 
         <ul>
             <li><a href="#about">About</a></li>
